@@ -13,7 +13,7 @@
  */
 int State::evaluate(){
   // [TODO] design your own evaluation function
-    int p_val[7] = { 0, 2, 6, 7, 8, 20 };
+    int p_val[7] = { 0, 2, 6, 7, 8, 20, 600 };
     int score = 0;
 
     for (int i = 0; i < BOARD_H; i++) {
