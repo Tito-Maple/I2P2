@@ -13,9 +13,18 @@
  */
 int State::evaluate(){
   // [TODO] design your own evaluation function
-  return 0;
-}
+    int p_val[7] = { 0, 2, 6, 7, 8, 20 };
+    int score = 0;
 
+    for (int i = 0; i < BOARD_H; i++) {
+        for (int j = 0; j < BOARD_W; j++) {
+            int m_player = p_val[(int)this->board.board[player][i][j]];
+            int opponent = p_val[(int)this->board.board[!player][i][j]];
+            score += m_player - opponent;
+        }
+    }
+    return score;
+}
 
 /**
  * @brief return next state after the move
